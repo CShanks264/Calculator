@@ -1,4 +1,46 @@
-.buttons {
-    color: lightblue;
+body {
     background-color: black;
+}
+
+nav {
+    color: lightgray;
+}
+
+div { 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#textBox {
+    margin: 5px;
+    width: 400px;
+    height: 50px;
+    font-size: 40px;
+}
+
+table{
+    margin: 5px;
+}
+
+.buttons, .opButtons {
+    font-size: 25px;
+    background-color: rgb(24, 24, 24);
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+
+}
+
+.buttons {
+    color: lightgray;
+}
+
+.opButtons {
+    color: orange;
+}
+
+#equals {
+    color: lightblue;
 }
