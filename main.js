@@ -1,9 +1,6 @@
-// const button1 = document.getElementsById('1')
+//Testing out a event listener that console logs word when 1 is pressed
+const oneButton = document.getElementById("1")
 
-// // Function that takes the name of the button and inputs it into text box
-// const buttonToText = (button) => {
-//     if (button === querySelector(button)){
-
-//     }
-// }
-
+oneButton.addEventListener("click", e => {
+    console.log('Word')
+})
