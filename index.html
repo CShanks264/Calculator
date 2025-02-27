@@ -20,45 +20,45 @@
     </nav>
     <!-- Input box -->
     <div>
-        <input type="text-field" id="textBox">
+        <input type="text" id="textBox" value="">
     </div>
     <!-- Buttons Layout -->
      <div>
         <table>
             <!-- First row -->
             <tr>
-                <td><button class="opButtons">C</button></td>
-                <td><button class="opButtons">%</button></td>
-                <td><button class="opButtons">Del</button></td>
-                <td><button class="opButtons">/</button></td>
+                <td><button class="opButtons" id="Clear" onclick="clearDisplay()">C</button></td>
+                <td><button class="opButtons" value="%" onclick="display('%')">%</button></td>
+                <td><button class="opButtons" id="Delete" onclick="backspace()">Del</button></td>
+                <td><button class="opButtons" value="/" onclick="display('/')">&divide;</button></td>
             </tr>
             <!-- Second row -->
             <tr>
-                <td><button class="buttons" id="7">7</button></td>
-                <td><button class="buttons" id="8">8</button></td>
-                <td><button class="buttons" id="9">9</button></td>
-                <td><button class="opButtons">*</button></td>
+                <td><button class="buttons" value="7" onclick="display('7')">7</button></td>
+                <td><button class="buttons" value="8" onclick="display('8')">8</button></td>
+                <td><button class="buttons" value="9" onclick="display('9')">9</button></td>
+                <td><button class="opButtons" value="*" onclick="display('*')">&times;</button></td>
             </tr>
             <!-- Third row -->
             <tr>
-                <td><button class="buttons" id="4">4</button></td>
-                <td><button class="buttons" id="5">5</button></td>
-                <td><button class="buttons" id="6">6</button></td>
-                <td><button class="opButtons">-</button></td>
+                <td><button class="buttons" value="4" onclick="display('4')">4</button></td>
+                <td><button class="buttons" value="5" onclick="display('5')">5</button></td>
+                <td><button class="buttons" value="6" onclick="display('6')">6</button></td>
+                <td><button class="opButtons" value="-" onclick="display('-')">-</button></td>
             </tr>
             <!-- Fourth row -->
             <tr>
-                <td><button class="buttons" id="1">1</button></td>
-                <td><button class="buttons" id="2">2</button></td>
-                <td><button class="buttons" id="3">3</button></td>
-                <td><button class="opButtons">+</button></td>
+                <td><button class="buttons" value="1" onclick="display('1')">1</button></td>
+                <td><button class="buttons" value="2" onclick="display('2')">2</button></td>
+                <td><button class="buttons" value="3" onclick="display('3')">3</button></td>
+                <td><button class="opButtons" value="+" onclick="display('+')">+</button></td>
             </tr>
             <!-- Fifth row -->
             <tr>
-                <td><button class="buttons">00</button></td>
-                <td><button class="buttons" id="0">0</button></td>
-                <td><button class="opButtons">.</button></td>
-                <td><button class="opButtons" id="equals">=</button></td>
+                <td><button class="buttons" value="00" onclick="display('00')">00</button></td>
+                <td><button class="buttons" value="0" onclick="display('0')">0</button></td>
+                <td><button class="opButtons" value="." onclick="display('.')">.</button></td>
+                <td><button class="opButtons" id="equals" onclick="solve()">=</button></td>
             </tr>
         </table>
      </div>
