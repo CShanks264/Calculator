@@ -20,7 +20,6 @@ but I couldn't get it to work */
 
 
 const textBox = document.getElementById('textBox')
-const textValue = textBox.value
 
 
 // Function that will display the button pressed
@@ -30,12 +29,13 @@ const display = input => {
 
 
 //Function that will clear the textBox
-const clearDisplay = input => {
+const clearDisplay = () => {
     textBox.value = ''
 }
 
 // Function that will act as a backspace/delete key
-const backspace = input => {
+const backspace = () => {
+    textBox.value = textBox.value.slice(0, textBox.value.length - 1)
 
 }
 
