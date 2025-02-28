@@ -40,6 +40,12 @@ const backspace = () => {
 }
 
 //Function that Solves the given equation
-const solve = input => {
-
+const solve = () => {
+    try{
+        textBox.value = eval(textBox.value)
+    } catch(error) {
+        // I want to add more detailed errors later like NaN or undefined or something
+        textBox.value = 'Error'
+    }
 }
+
