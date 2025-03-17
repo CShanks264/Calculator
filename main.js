@@ -49,3 +49,10 @@ const solve = () => {
     }
 }
 
+
+//Shortcut funtion that user to press enter on their keyboard to solve the equation
+textBox.addEventListener('keydown', (input) =>{
+    if (input.code === 'Enter'){
+        solve()
+    }
+})
