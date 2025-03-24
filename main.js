@@ -50,9 +50,21 @@ const solve = () => {
 }
 
 
-//Shortcut funtion that user to press enter on their keyboard to solve the equation
-textBox.addEventListener('keydown', (input) =>{
+//Keyboard Shortcuts
+textBox.addEventListener('keydown', input => {
     if (input.code === 'Enter'){
+        //Enter/return solves equation
         solve()
+    } else if (input.code === 'Escape'){
+        //Esc key clears textBox
+        clearDisplay()
     }
 })
+
+//Trying to limit textBox to only allow numbers & certain characters
+//Chatgpt helped with this section of code
+textBox.addEventListener('input', () => {
+    textBox.value = textBox.value.replace(/[^0-9+\-*/.()^%]/g, '');
+});
+
+
