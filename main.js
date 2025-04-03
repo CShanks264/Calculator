@@ -21,6 +21,10 @@ but I couldn't get it to work */
 
 const textBox = document.getElementById('textBox')
 
+//Function that will  toggle menu
+const toggleMenu = (x) => {
+    x.classList.toggle('change')
+}
 
 // Function that will display the button pressed
 const display = input => {
