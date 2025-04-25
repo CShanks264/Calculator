@@ -22,54 +22,66 @@
             <div class="bar3"></div>
         </div>
         <div class="menuContent">
-            <div>Log</div>
+            <div>History</div>
             <div><a href=''>Unit Converter</a></div>
         </div>
     </nav>
-    <!-- Input box -->
-    <div class="calc">
-        <input type="text" id="textBox" value="" placeholder="Enter equation here">
+
+    <!-- Da calculator :D -->
+    <div id="calc">
+        <!-- Input box -->
+        <div>
+            <input type="text" id="textBox" value="" placeholder="Enter equation here">
+        </div>
+
+        <!-- Buttons Layout -->
+        <div>
+            <table>
+                <!-- First row -->
+                <tr>
+                    <td><button class="opButtons" id="Clear" onclick="clearDisplay()">C</button></td>
+                    <td><button class="opButtons" value="%" onclick="display('%')">%</button></td>
+                    <td><button class="opButtons" id="Delete" onclick="backspace()">Del</button></td>
+                    <td><button class="opButtons" value="/" onclick="display('/')">&divide;</button></td>
+                </tr>
+                <!-- Second row -->
+                <tr>
+                    <td><button class="buttons" value="7" onclick="display('7')">7</button></td>
+                    <td><button class="buttons" value="8" onclick="display('8')">8</button></td>
+                    <td><button class="buttons" value="9" onclick="display('9')">9</button></td>
+                    <td><button class="opButtons" value="*" onclick="display('*')">&times;</button></td>
+                </tr>
+                <!-- Third row -->
+                <tr>
+                    <td><button class="buttons" value="4" onclick="display('4')">4</button></td>
+                    <td><button class="buttons" value="5" onclick="display('5')">5</button></td>
+                    <td><button class="buttons" value="6" onclick="display('6')">6</button></td>
+                    <td><button class="opButtons" value="-" onclick="display('-')">-</button></td>
+                </tr>
+                <!-- Fourth row -->
+                <tr>
+                    <td><button class="buttons" value="1" onclick="display('1')">1</button></td>
+                    <td><button class="buttons" value="2" onclick="display('2')">2</button></td>
+                    <td><button class="buttons" value="3" onclick="display('3')">3</button></td>
+                    <td><button class="opButtons" value="+" onclick="display('+')">+</button></td>
+                </tr>
+                <!-- Fifth row -->
+                <tr>
+                    <td><button class="buttons" value="00" onclick="display('00')">00</button></td>
+                    <td><button class="buttons" value="0" onclick="display('0')">0</button></td>
+                    <td><button class="opButtons" value="." onclick="display('.')">.</button></td>
+                    <td><button class="opButtons" id="equals" onclick="solve()">=</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- History -->
+        <div class="history">
+            <h2>History</h2>
+            <div id="historyContent"></div>
+        </div>
     </div>
-    <!-- Buttons Layout -->
-     <div class="calc">
-        <table>
-            <!-- First row -->
-            <tr>
-                <td><button class="opButtons" id="Clear" onclick="clearDisplay()">C</button></td>
-                <td><button class="opButtons" value="%" onclick="display('%')">%</button></td>
-                <td><button class="opButtons" id="Delete" onclick="backspace()">Del</button></td>
-                <td><button class="opButtons" value="/" onclick="display('/')">&divide;</button></td>
-            </tr>
-            <!-- Second row -->
-            <tr>
-                <td><button class="buttons" value="7" onclick="display('7')">7</button></td>
-                <td><button class="buttons" value="8" onclick="display('8')">8</button></td>
-                <td><button class="buttons" value="9" onclick="display('9')">9</button></td>
-                <td><button class="opButtons" value="*" onclick="display('*')">&times;</button></td>
-            </tr>
-            <!-- Third row -->
-            <tr>
-                <td><button class="buttons" value="4" onclick="display('4')">4</button></td>
-                <td><button class="buttons" value="5" onclick="display('5')">5</button></td>
-                <td><button class="buttons" value="6" onclick="display('6')">6</button></td>
-                <td><button class="opButtons" value="-" onclick="display('-')">-</button></td>
-            </tr>
-            <!-- Fourth row -->
-            <tr>
-                <td><button class="buttons" value="1" onclick="display('1')">1</button></td>
-                <td><button class="buttons" value="2" onclick="display('2')">2</button></td>
-                <td><button class="buttons" value="3" onclick="display('3')">3</button></td>
-                <td><button class="opButtons" value="+" onclick="display('+')">+</button></td>
-            </tr>
-            <!-- Fifth row -->
-            <tr>
-                <td><button class="buttons" value="00" onclick="display('00')">00</button></td>
-                <td><button class="buttons" value="0" onclick="display('0')">0</button></td>
-                <td><button class="opButtons" value="." onclick="display('.')">.</button></td>
-                <td><button class="opButtons" id="equals" onclick="solve()">=</button></td>
-            </tr>
-        </table>
-     </div>
+
     <script src="main.js"></script>
 </body>
 </html>

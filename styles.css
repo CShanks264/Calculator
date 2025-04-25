@@ -1,10 +1,9 @@
 body {
     background-color: black;
+    color:lightgrey;
 }
 
-nav {
-    color: lightgray;
-}
+
 .menuBtn {
     width: 25px;
     height: 25px;
@@ -35,7 +34,7 @@ nav {
 
 .menuContent {
     font-size: 30px;
-    background-color: rgb(24, 24, 24);
+    background-color: black;
     width: 250px;
     z-index: 1;
     top: 0;
@@ -44,7 +43,7 @@ nav {
 
 .menuContent div:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: rgb(35, 35, 35);
 }
 
 .menuContent a {
@@ -53,8 +52,9 @@ nav {
 }
 
 
-.calc { 
+#calc { 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -65,6 +65,7 @@ nav {
     width: 400px;
     height: 50px;
     font-size: 40px;
+    letter-spacing: 2.5px;
 }
 
 table{
@@ -77,6 +78,8 @@ table{
     width: 100px;
     height: 80px;
     border-radius: 10px;
+    user-select: none;
+    outline: 0;
 
 }
 
@@ -90,4 +93,15 @@ table{
 
 #equals {
     color: lightblue;
+}
+
+
+#historyContent p {
+    width: fit-content;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+}
+
+#historyContent p:hover {
+    background-color: rgb(35, 35, 35);
 }

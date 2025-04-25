@@ -20,13 +20,19 @@ but I couldn't get it to work */
 
 
 const textBox = document.getElementById('textBox')
+const calc = document.getElementById('calc')
 
+//MENU STUFF
 //Function that will  toggle menu
 const toggleMenu = (x) => {
     x.classList.toggle('change')
 }
 
-// Function that will display the button pressed
+const enableHistory = () => {
+
+}
+
+// Function that will display things to textBox
 const display = input => {
     textBox.value += input
 }
@@ -43,10 +49,35 @@ const backspace = () => {
 
 }
 
+//HISTORY STUFF
+const historyContent = document.getElementById('historyContent')
+
+//Funtion that takes the last solve equation and logs it
+const addtoHistory = input => {
+    const recentHistory = document.createElement('p')
+    historyContent.prepend(recentHistory)
+    recentHistory.textContent = input
+
+    
+
+    //Event listener that append solution to textBox
+    recentHistory.addEventListener('click', c => {
+        const justAns = recentHistory.textContent.split('=')
+
+        display(justAns[1])
+    })
+}
+
+
 //Function that Solves the given equation
 const solve = () => {
     try{
-        textBox.value = eval(textBox.value)
+        const equation = textBox.value
+        const solution = eval(textBox.value)
+        textBox.value = solution
+
+        //Adds whole equation to history
+        addtoHistory(equation + '=' +  solution)
     } catch(error) {
         // I want to add more detailed errors later like NaN or undefined or something
         textBox.value = 'Error'
@@ -55,8 +86,9 @@ const solve = () => {
 
 
 //Keyboard Shortcuts
-textBox.addEventListener('keydown', input => {
+calc.addEventListener('keydown', input => {
     if (input.code === 'Enter'){
+        input.preventDefault()
         //Enter/return solves equation
         solve()
     } else if (input.code === 'Escape'){
