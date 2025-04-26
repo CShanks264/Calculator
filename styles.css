@@ -95,6 +95,10 @@ table{
     color: lightblue;
 }
 
+#history {
+    display: none;
+}
+
 
 #historyContent p {
     width: fit-content;

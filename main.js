@@ -29,8 +29,15 @@ const toggleMenu = (x) => {
 }
 
 const enableHistory = () => {
+    const history = document.getElementById('history')
 
+    if (history.style.display === 'none'){
+        history.style.display = 'block'
+    } else {
+        history.style.display = 'none'
+    }
 }
+
 
 // Function that will display things to textBox
 const display = input => {
