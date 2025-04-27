@@ -7,6 +7,10 @@ body {
 .menuBtn {
     width: 25px;
     height: 25px;
+    padding: 5px;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
 }
 .menuBtn:hover {
     cursor: pointer;
@@ -21,7 +25,7 @@ body {
 }
 
 .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+    transform: translate(0, 11px) rotate(-46deg);
 }
 
 .change .bar2 {
@@ -29,24 +33,29 @@ body {
 }
 
 .change .bar3 {
-    transform: translate(0, -7px) rotate(45deg);
+    transform: translate(0, -6px) rotate(46deg);
 }
 
-.menuContent {
+#menuContent {
+    display: none;
     font-size: 30px;
     background-color: black;
     width: 250px;
     z-index: 1;
-    top: 0;
-    left: 0;
+    margin: 10px;
+    top: 35px;
+    left: 5px;
+    position: absolute;
+
+
 }
 
-.menuContent div:hover {
+#menuContent div:hover {
     cursor: pointer;
     background-color: rgb(35, 35, 35);
 }
 
-.menuContent a {
+#menuContent a {
     text-decoration: none;
     color: lightgray;
 }
@@ -108,4 +117,5 @@ table{
 
 #historyContent p:hover {
     background-color: rgb(35, 35, 35);
+    cursor: pointer;
 }

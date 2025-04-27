@@ -1,44 +1,31 @@
-/* I was trying to get the calculator to work with event listeners
-but I couldn't get it to work */
-
-
-// const numButtons = document.getElementsByClassName('buttons')
-// const opButtons = document.getElementsByClassName('opButtons')
-// const equals = document.getElementById('equals')
- 
-// numButtons.addEventListener('click', e => {
-//     textValue = e.value
-// })
-
-// equals.addEventListener('click', (textValue) => {
-//     if (textValue === Number || textValue === opButtons){
-        
-//     } else {
-//         textValue += 'ERROR NaN'
-//     }
-// })
-
-
 const textBox = document.getElementById('textBox')
-const calc = document.getElementById('calc')
 
 //MENU STUFF
 //Function that will  toggle menu
 const toggleMenu = (x) => {
     x.classList.toggle('change')
+
+    const menuContent = document.getElementById('menuContent')
+
+    if (menuContent.style.display === 'none' || menuContent.style.display === ''){
+        menuContent.style.display = 'block'
+    } else {
+        menuContent.style.display = 'none'
+    }
 }
 
+//Function that will toggle the history log underneath the calculator
 const enableHistory = () => {
     const history = document.getElementById('history')
 
-    if (history.style.display === 'none'){
+    if (history.style.display === 'none' || history.style.display === ''){
         history.style.display = 'block'
     } else {
         history.style.display = 'none'
     }
 }
 
-
+//BASE FUNCTIONS FOR CALCULATOR
 // Function that will display things to textBox
 const display = input => {
     textBox.value += input
@@ -93,7 +80,7 @@ const solve = () => {
 
 
 //Keyboard Shortcuts
-calc.addEventListener('keydown', input => {
+document.addEventListener('keydown', input => {
     if (input.code === 'Enter'){
         input.preventDefault()
         //Enter/return solves equation
@@ -104,7 +91,7 @@ calc.addEventListener('keydown', input => {
     }
 })
 
-//Trying to limit textBox to only allow numbers & certain characters
+//Eventlistener that only allows #'s and certain characters to be typed in textBox
 //Chatgpt helped with this section of code
 textBox.addEventListener('input', () => {
     textBox.value = textBox.value.replace(/[^0-9+\-*/.()^%]/g, '');
