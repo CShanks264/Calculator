@@ -28,6 +28,7 @@ const enableHistory = () => {
 //BASE FUNCTIONS FOR CALCULATOR
 // Function that will display things to textBox
 const display = input => {
+    textBox.style.color = 'lightgray'
     textBox.value += input
 }
 
@@ -70,6 +71,9 @@ const solve = () => {
         const solution = eval(textBox.value)
         textBox.value = solution
 
+        //Change the Solution color
+        textBox.style.color = 'lightblue'
+
         //Adds whole equation to history
         addtoHistory(equation + '=' +  solution)
     } catch(error) {
@@ -94,7 +98,8 @@ document.addEventListener('keydown', input => {
 //Eventlistener that only allows #'s and certain characters to be typed in textBox
 //Chatgpt helped with this section of code
 textBox.addEventListener('input', () => {
-    textBox.value = textBox.value.replace(/[^0-9+\-*/.()^%]/g, '');
+    textBox.value = textBox.value.replace(/[^0-9+\-*/.()^%]/g, '')
+    textBox.style.color = 'lightgray'
 });
 
 

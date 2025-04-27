@@ -75,6 +75,13 @@ body {
     height: 50px;
     font-size: 40px;
     letter-spacing: 2.5px;
+    background-color: rgb(35, 35, 35);
+    color: lightgray;
+    
+}
+
+#textBox::placeholder {
+    color: lightgray;
 }
 
 table{
